@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cadastro de Usuário</h1>
+<%a = 'Ruby'%>
+<%b = 'Rails'%>
+
+<%="Teste com #{a} on #{b}"%>
+
+<div id="customers">
+  <% @customers.each do |customer| %> 
+    <%= render customer %>
+    <p>
+      <%= link_to "Mostrar detalhes", customer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Fazer Cadastro", new_customer_path %>

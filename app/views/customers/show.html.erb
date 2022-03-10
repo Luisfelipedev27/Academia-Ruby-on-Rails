@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @customer %>
+
+<div>
+  <%= link_to "Editar Usuário", edit_customer_path(@customer) %> |
+  <%= link_to "Voltar para Cadastrar usuário", customers_path %>
+<br> <br>
+  <%= button_to "Remover Usuário", @customer, method: :delete %>
+</div>
+
