@@ -1,3 +1,4 @@
+
 <h1>Editar dados de Usuário</h1>
 
 <%= render "form", customer: @customer %>
@@ -5,6 +6,10 @@
 <br>
 
 <div>
+  <button>
   <%= link_to "Mostrar Usuário", @customer %> |
+  </button>
+   <button>
   <%= link_to "Voltar ao início", customers_path %>
+  </button>
 </div>

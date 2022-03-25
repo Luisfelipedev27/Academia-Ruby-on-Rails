@@ -1,3 +1,7 @@
+<html style="background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;">
 <p style="color: green"><%= notice %></p>
 
 <h1>Cadastro de Usuário</h1>
@@ -10,9 +14,15 @@
   <% @customers.each do |customer| %> 
     <%= render customer %>
     <p>
+    <button>
       <%= link_to "Mostrar detalhes", customer %>
+      </button>
     </p>
   <% end %>
 </div>
 
+<button>
 <%= link_to "Fazer Cadastro", new_customer_path %>
+<button>
+
+</html>

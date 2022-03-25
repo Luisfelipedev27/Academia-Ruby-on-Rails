@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2? family= Lato:ital@0;1 & display=swap');
+
+/* Zerando o css,tirando as margens.Isso é padrao */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* Fundo tela */
+html {
+    width: 100vw;  /*Altura e largura inteira do html TOTAL*/
+    height: 100vh;
+    font-size: 62.5%;
+    color: white   
+}
+body{ /* Linear gradiente se refere ao fundo opaco mais degrade(gradiente)*/
+    background: black;
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+
+}
+
+/* Menu - Header - Navbar */
+header{
+    width: 100%;
+    height: 9vh;
+    background: linear-gradient(rgb(17, 17, 20, 2.3), rgba(20, 20, 20, 0));
+}
+
+.menu-content{
+    text-transform: uppercase; /*Deixa todas as letras maiusculas*/
+    height: 100%; 
+    display: flex; /*Logo de um lado e menu do outro*/
+    justify-content: space-around; /*distanciamento deles no meio e entre as bordas*/
+    align-items: center;
+    font-size: 1.8rem;
+}
+.logo{
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem; /*Espaço entre as letras*/
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.menu-content .list-itens{
+    display: flex;  /*para ficar um do lado do outro*/
+    list-style: none;  /*pra tirar a bolinha padrao da lista*/
+    gap: 10px; /*Distancia entre os itens do menu*/
+}
+.menu-content .list-itens a{
+    text-decoration: none; /*Tira o sublinhado do link*/
+    color: white;
+    padding: 1.5rem; /*Aumenta a area de contato do cursor*/
+    transition: 2ms ease-in;
+    position: relative;
+}
+/* Before para gerar conteúdo e animação em uma determinada area */
+.menu-content .list-itens a:before { 
+  content: ' '; /*Todo before deve ter um content vazio*/
+  position: absolute; 
+  bottom: 0; /*A posição que começa*/
+  left: 0;
+  width: 0px; 
+  border-radius: 40px;
+  height: 2px; 
+  background-color:rgb(3, 238, 255);
+  transition: all 0.5s ease;
+}
+.menu-content .list-itens a:hover:before {
+    width: 100px;
+}
+/* Centro - Conteúdo principal */
+main {
+    height: 91vh; /*O header ja estáutilizando 9vh da página,totalizando 100*/
+    display: flex;
+                        /*justify PARA CENTRALIZAR*/
+    align-items: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+
+}
+@keyframes moveBanner {
+    0%{
+        transform: translateY(30rem) rotateY(-20deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+    }
+}
+/* TEXTOS PRINCIPAIS */
+.primary-text{
+    width: 850px;
+    font-size: 3.8rem;
+    margin-bottom: 4rem; /*distanccia do texto pro botao*/
+    text-align: center; /*Pro texto ficar centralizado*/
+    font-family: monospace;
+    animation: moveBanner 2.5s;
+}
+.second-text{
+    margin-bottom: 5rem; /*Distancia entre os botoes*/
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    animation: moveBanner 3.1s;
+}
+    /* BOTOESSSS */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: moveBanner 3.7s;
+}
+.btns button{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold; /*Letra mais cheia*/
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1s;
+    text-decoration:none;
+}
+.btns button:hover{
+    color: rgb(3, 238, 255);
+    border: none;
+}
+
+
+.btns button:before {
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgba(160, 144, 144, 0.322);
+    z-index: -1; /*O efeito não vai atrapalhar o texto no botão*/
+    transition: 0.6s;
+    border-radius: 20px; /*A mesma de cima*/
+}
+
+
+.btns button:hover:before {
+    width: 100%;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     <header> <!-- Cabeçalho!!! -->
+<div> 
+      
+</div>
+        <div class="menu-content"> 
+            <h1 class="logo">academiaEquilibrium</h1> 
+            <nav class="header-menu"></nav> <!-- nav :Barra de navegaçao paera fazer menu -->
+            <ul class="list-itens"> <!-- É uma lista não ordenada -->
+                <li><a href="#">Home</a></li> <!-- <a> link dentro da lista <li> -->
+                <li><a href="#">Pacotes</a></li> <!-- "#" sig. que não está ligando o link a nada -->
+                <li><a href="#">Aulas</a></li>
+                <li><a href="#">Unidades</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <main> <!-- Conteúdo principal/// -->
+        <div class="main-content">
+            <h1 class="primary-text">Apaixone-se por cuidar de si mesmo!</h1>
+            <h2 class="second-text">Se inscreva agora e mude de vida</h2>
+            <div class="btns">
+                <button class="btn-exp">Agendar aula experimental</button>
+                <button class="btn-personal"> <%= link_to 'Cadastre-se', '/customers'%> </button>
+            </div>
+        </div>
+
+    </main>
+
+    
+
+</body>
+</html>

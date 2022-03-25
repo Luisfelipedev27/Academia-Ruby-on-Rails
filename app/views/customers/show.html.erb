@@ -3,9 +3,15 @@
 <%= render @customer %>
 
 <div>
+<button>
   <%= link_to "Editar Usuário", edit_customer_path(@customer) %> |
+  </button>
+  <button>
   <%= link_to "Voltar para Cadastrar usuário", customers_path %>
+  </button>
 <br> <br>
+<button>
   <%= button_to "Remover Usuário", @customer, method: :delete %>
+  </button>
 </div>
 
