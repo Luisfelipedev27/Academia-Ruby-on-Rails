@@ -2,16 +2,26 @@
 
 <%= render @customer %>
 
-<div>
-<button>
-  <%= link_to "Editar Usuário", edit_customer_path(@customer) %> |
+<div style="padding-left:40rem;">
+<button class="editar">
+  <%= link_to "Editar meus dados", edit_customer_path(@customer), class:"edita" %> |
   </button>
-  <button>
-  <%= link_to "Voltar para Cadastrar usuário", customers_path %>
+  <button class="voltar">
+  <%= link_to "Voltar para o início", inicio_path, class:"volta" %>
   </button>
 <br> <br>
-<button>
-  <%= button_to "Remover Usuário", @customer, method: :delete %>
-  </button>
+
 </div>
+
+<style>
+   .edita {
+     text-decoration:none;
+
+   }
+   
+   .volta {
+    text-decoration:none;
+  }
+
+</style>
 

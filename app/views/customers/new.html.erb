@@ -1,11 +1,30 @@
-<h1 style="padding-top: 180px;padding-left:40rem; font-family:sans-serif; ">Faça seu cadastro</h1>
+<h1 style="padding-top: 180px;padding-left:37rem; font-family:sans-serif; color:white; text-shadow: 0.1em 0.1em 0.2em black, 0.1em 0.1em 0.2em black;  ">FAÇA SEU CADASTRO</h1>
 
 <%= render "form", customer: @customer %>
 
 <br>
 <div style='padding-left:46rem;'>
-<button style='width:120px; height:25px; box-shadow: 2px 2px 2px rgba(0,0,0,0.2); background: white; border-radius:8px;'>
-  <%= link_to "Voltar", customers_path %>
+<button class="botaovoltar">
+  <%= link_to "Voltar", inicio_path, class:"voltar"%>
 </button>
 </div>
 
+<style>
+.voltar {
+text-decoration:none;
+}
+
+.botaovoltar{
+width:120px;
+height:25px;
+box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+background: white; 
+border-radius:8px;
+}
+
+.botaovoltar:hover{
+    color: rgb(3, 238, 255);
+    border: none;
+}
+
+</style>

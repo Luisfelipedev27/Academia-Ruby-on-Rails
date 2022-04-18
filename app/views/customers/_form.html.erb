@@ -1,8 +1,5 @@
 
-<html style="background: #FFEFBA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
+<html >
 <%= form_with(model: customer) do |form| %>
   <% if customer.errors.any? %>
     <div style="color: red">
@@ -15,8 +12,8 @@ background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, F
       </ul>
     </div>
   <% end %>
-<div style='padding-left:40rem;  border: 6px solid white; '>
-  <div style='padding:10px;'>
+<div style='padding-left:40rem; color:white; font-size:25px; text-shadow: 0.1em 0.1em 0.2em black'>
+  <div style='padding:10px;' >
     <%= form.label :nome%>
     <%= form.text_field :nome %>
   </div>
@@ -38,10 +35,21 @@ background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, F
 
 
   <div style='padding:10px;'>
-    <%= form.submit %>
+    <%=form.submit %>
   </div>
   </div>
 
 <% end %>
-
 <html>
+
+<style>
+html {
+    background: url(<%= asset_path 'formulario.png' %>);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+
+}
+
+</style>

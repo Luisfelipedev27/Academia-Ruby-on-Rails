@@ -1,22 +1,21 @@
-<div id="<%= dom_id customer %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= customer.name %>
-  </p>
+<html>
 
-  <p>
-    <strong>Email:</strong>
-    <%= customer.email %>
-  </p>
-
-  <p>
-    <strong>Data de Nascimento:</strong>
-    <%= customer.birthday %>
-  </p>
-
-  <p>
-    <strong>Observação:</strong>
-    <%= customer.obs %>
-  </p>
+<div id="<%= dom_id customer %>" style="padding-left:30rem; color:white; font-size:25px; text-shadow: 0.1em 0.1em 0.2em black; padding-top: 210px;">
+ 
+<h1> Usuário Cadastrado com sucesso! </h1>
 
 </div>
+
+</html>
+
+<style>
+  html{
+    background: url(<%= asset_path 'formulario.png' %>);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    
+}
+
+</style>

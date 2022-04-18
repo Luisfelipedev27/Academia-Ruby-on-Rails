@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,18 +17,18 @@
 
 /* Fundo tela */
 html {
-    width: 100vw;  /*Altura e largura inteira do html TOTAL*/
-    height: 100vh;
+    width: 100%%;  /*Altura e largura inteira do html TOTAL*/
+    height: 100%;
     font-size: 62.5%;
     color: white   
+    
 }
 body{ /* Linear gradiente se refere ao fundo opaco mais degrade(gradiente)*/
-    background: black;
+    background: linear-gradient(rgb(17, 17, 17, 0.1), rgba(20, 20, 20, 1)), url(<%= asset_path 'academia.jpg' %>);
     background-position: center center;
     background-size: cover;
     background-position-y: 0px;
     background-repeat: no-repeat;
-
 }
 
 /* Menu - Header - Navbar */
@@ -160,9 +160,12 @@ main {
     border-radius: 20px; /*A mesma de cima*/
 }
 
-
 .btns button:hover:before {
     width: 100%;
+}
+.luis {
+    text-decoration: none;
+    color: white;
 }
 
     </style>
@@ -193,7 +196,7 @@ main {
             <h2 class="second-text">Se inscreva agora e mude de vida</h2>
             <div class="btns">
                 <button class="btn-exp">Agendar aula experimental</button>
-                <button class="btn-personal"> <%= link_to 'Cadastre-se', '/customers'%> </button>
+                <button class="btn-personal"> <%= link_to 'Cadastre-se', '/new', class:"luis" %> </button>
             </div>
         </div>
 
